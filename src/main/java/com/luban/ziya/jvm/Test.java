@@ -7,6 +7,8 @@ public class Test {
     public static void main(String[] args) {
         Test demo = new Test();
 
+        Class<?> clazz = Test.class;
+
         System.out.println(demo.add());
     }
 
