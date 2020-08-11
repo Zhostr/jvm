@@ -9,7 +9,9 @@ public class DCLTest {
 
     public int a = 11;
 
-    private DCLTest() {}
+    private DCLTest() {
+        a++;
+    }
 
     public static DCLTest getInstance() {
         if (null == instance) {

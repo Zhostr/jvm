@@ -7,9 +7,9 @@ public class Test {
     public static void main(String[] args) {
         Test demo = new Test();
 
-        Class<?> clazz = Test.class;
+        while (true);
 
-        System.out.println(demo.add());
+//        System.out.println(demo.add());
     }
 
     public int add() {

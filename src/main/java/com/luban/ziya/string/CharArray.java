@@ -9,8 +9,6 @@ public class CharArray {
     public static void main(String[] args) {
         char[] arr = new char[]{'1', '2'};
 
-        arr.getClass();
-
         while (true);
     }
 }

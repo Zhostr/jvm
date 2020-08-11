@@ -6,7 +6,7 @@ package com.luban.ziya.string;
  *
  *  用于证明字符串常量池中不会出现相同的字符串
  */
-public class TestString_10 {
+public class TestStringTable {
 
     public static void main(String[] args) {
         String str1 = "1";
