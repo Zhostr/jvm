@@ -7,7 +7,7 @@ public class Test {
     public static void main(String[] args) {
         Test demo = new Test();
 
-        while (true);
+//        while (true);
 
 //        System.out.println(demo.add());
     }
