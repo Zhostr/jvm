@@ -1,6 +1,6 @@
 package com.luban.ziya.oom;
 
-public class StackOverFlowTest2 {
+public class StackOverFlowTest {
 
     private int val = 0;
 
@@ -11,7 +11,13 @@ public class StackOverFlowTest2 {
     }
 
     public static void main(String[] args) {
-        StackOverFlowTest2 test = new StackOverFlowTest2();
+        StackOverFlowTest test = new StackOverFlowTest();
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         try {
             test.test();
