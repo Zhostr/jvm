@@ -7,6 +7,8 @@ package com.luban.ziya.jni;
 public class App {
 
     public static void main(String[] args) {
+        System.out.println(System.getProperty("java.library.path"));
+
         System.loadLibrary("jni");
 
         new MyThread().run0();
