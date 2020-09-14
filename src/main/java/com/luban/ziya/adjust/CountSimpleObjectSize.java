@@ -9,6 +9,8 @@ public class CountSimpleObjectSize {
     public static void main(String[] args) {
         CountSimpleObjectSize test1 = new CountSimpleObjectSize();
 
+        int len = arr.length;
+
         System.out.printf(ClassLayout.parseInstance(arr).toPrintable());
     }
 }

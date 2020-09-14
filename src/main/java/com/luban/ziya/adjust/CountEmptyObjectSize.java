@@ -9,7 +9,11 @@ import org.openjdk.jol.info.ClassLayout;
 public class CountEmptyObjectSize {
 
     public static void main(String[] args) {
-        CountEmptyObjectSize obj = new CountEmptyObjectSize();
+//        CountEmptyObjectSize obj = new CountEmptyObjectSize();
+
+//        System.out.println(ClassLayout.parseInstance(obj).toPrintable());
+
+        Object obj = new Object();
 
         System.out.println(ClassLayout.parseInstance(obj).toPrintable());
     }
