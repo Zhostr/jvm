@@ -5,6 +5,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
+import io.netty.handler.timeout.IdleStateEvent;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
 public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
@@ -54,5 +55,30 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         System.out.println("客户端 " + ctx.channel().remoteAddress() + " 离线了");
+    }
+
+    @Override
+    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        String str = "";
+
+        if (evt instanceof IdleStateEvent) {
+            IdleStateEvent event = (IdleStateEvent) evt;
+
+            switch (event.state()) {
+                case ALL_IDLE:
+                    str = "读写超时";
+                    break;
+                case READER_IDLE:
+                    str = "读超时";
+
+                    break;
+                case WRITER_IDLE:
+                    str = "写超时";
+
+                    break;
+            }
+        }
+
+        System.out.println("发生时间: " + str);
     }
 }
