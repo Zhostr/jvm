@@ -1,6 +1,7 @@
 package com.luban.ziya.socket.bio;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
@@ -25,13 +26,20 @@ public class Client {
     public void run() {
         Socket socket = null;
         OutputStream outputStream = null;
+        InputStream inputStream = null;
 
         try {
             socket = new Socket(ip, port);
 
             outputStream = socket.getOutputStream();
+            inputStream = socket.getInputStream();
 
             outputStream.write("我是客户端".getBytes("utf-8"));
+
+            //=====
+            byte[] content = new byte[1024];
+            inputStream.read(content);
+            System.out.println("服务器端返回: " + new String(content));
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

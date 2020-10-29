@@ -2,6 +2,7 @@ package com.luban.ziya.socket.bio;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -19,6 +20,7 @@ public class Server {
         ServerSocket serverSocket = null;
         Socket socket = null;
         InputStream inputStream = null;
+        OutputStream outputStream = null;
 
         try {
             serverSocket = new ServerSocket(6688);
@@ -39,7 +41,12 @@ public class Server {
                 // 2、阻塞
                 inputStream.read(content);
 
-                System.out.println("客户端说: " + new String(content));
+                System.out.println("客户端说: " + new String(content) + "# 写回去");
+
+                //=====
+                outputStream = socket.getOutputStream();
+
+                outputStream.write(content);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -63,6 +70,14 @@ public class Server {
             if (null != inputStream) {
                 try {
                     inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (null != outputStream) {
+                try {
+                    outputStream.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
