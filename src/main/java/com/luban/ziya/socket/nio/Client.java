@@ -68,13 +68,32 @@ public class Client {
 
                             channel.write(ByteBuffer.wrap("Hello, Server".getBytes()));
                         } else if (selectionKey.isReadable()) {
-
+                            read(selectionKey);
                         }
                     }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    private void read(SelectionKey selectionKey) {
+        SocketChannel channel = (SocketChannel) selectionKey.channel();
+
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+
+        try {
+            int len = channel.read(byteBuffer);
+            if (-1 == len) {
+                System.out.println("服务端已退出...");
+
+                channel.close();
+            } else {
+                System.out.println("服务端返回: " + new String(byteBuffer.array()));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

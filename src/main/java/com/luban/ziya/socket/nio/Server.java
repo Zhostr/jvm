@@ -41,7 +41,7 @@ public class Server {
         this.init();
 
         while (true) {
-            System.out.println("Wait Client Come...");
+            System.out.println("Wait Select Event Come...");
 
             try {
                 int event = selector.select();
@@ -75,6 +75,8 @@ public class Server {
             byteBuffer.flip();
 
             System.out.println("客户端说: " + new String(byteBuffer.array()));
+
+            channel.write(byteBuffer);
         } catch (IOException e) {
             e.printStackTrace();
         }
