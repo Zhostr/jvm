@@ -7,6 +7,6 @@ public class Test_8 {
     }
 
     public static void main(String[] args) throws ClassNotFoundException {
-        Class<?> clazz = Class.forName("com.luban.classload.Test_1_A");
+        Class<?> clazz = Class.forName("com.luban.ziya.classload.Test_1_A");
     }
 }

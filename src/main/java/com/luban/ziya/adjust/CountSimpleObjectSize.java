@@ -13,7 +13,7 @@ public class CountSimpleObjectSize {
     public static void main(String[] args) {
         CountSimpleObjectSize test1 = new CountSimpleObjectSize();
 
-//        System.out.printf(ClassLayout.parseInstance(test1).toPrintable());
-        System.out.printf(ClassLayout.parseInstance(arr).toPrintable());
+        System.out.printf(ClassLayout.parseInstance(test1).toPrintable());
+//        System.out.printf(ClassLayout.parseInstance(arr).toPrintable());
     }
 }

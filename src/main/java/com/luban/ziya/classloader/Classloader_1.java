@@ -4,7 +4,7 @@ import java.io.*;
 
 /**
  *  结果：
- *      class com.qimingnan.classloader.Classloader_1_A
+ *      class com.luban.ziya.classloader.Classloader_1_A
  *      sun.misc.Launcher$AppClassLoader@14dad5dc
  *
  *  没有走我们自定义的类加载器，为什么呢？
