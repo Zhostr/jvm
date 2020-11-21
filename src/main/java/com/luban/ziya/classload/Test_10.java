@@ -3,7 +3,6 @@ package com.luban.ziya.classload;
 public class Test_10 {
     public static void main(String[] args) {
         System.out.printf(Test_10_B.str);
-//        System.out.println(Test_10_A.str);
     }
 }
 
