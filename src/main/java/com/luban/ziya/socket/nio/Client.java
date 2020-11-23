@@ -8,6 +8,7 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created By ziya
@@ -66,7 +67,15 @@ public class Client {
 
                             channel.register(selector, SelectionKey.OP_READ);
 
-                            channel.write(ByteBuffer.wrap("Hello, Server".getBytes()));
+                            while (true) {
+                                try {
+                                    TimeUnit.SECONDS.sleep(1);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+
+                                channel.write(ByteBuffer.wrap("Hello, Server".getBytes()));
+                            }
                         } else if (selectionKey.isReadable()) {
                             read(selectionKey);
                         }
