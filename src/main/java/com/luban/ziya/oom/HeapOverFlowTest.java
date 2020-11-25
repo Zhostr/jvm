@@ -5,10 +5,10 @@ import java.util.List;
 
 public class HeapOverFlowTest {
 
-    int[] intArr = new int[50];
+    int[] intArr = new int[10];
 
     public static void main(String[] args) {
-        List<HeapOverFlowTest> objs = new ArrayList<>();
+        List<HeapOverFlowTest> objs = new ArrayList<HeapOverFlowTest>();
 
         for (;;) {
             try {

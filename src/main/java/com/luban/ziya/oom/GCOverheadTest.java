@@ -10,7 +10,7 @@ import java.util.List;
 public class GCOverheadTest {
 
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
 
         Integer val = 0;
 
