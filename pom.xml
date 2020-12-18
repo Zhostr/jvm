@@ -10,6 +10,9 @@
     <version>1.0.0</version>
     <modules>
         <module>netty-research</module>
+        <module>serialize-research</module>
+        <module>serialize-research/example_1</module>
+        <module>server-client</module>
     </modules>
 
     <dependencies>
