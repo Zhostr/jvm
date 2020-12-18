@@ -24,9 +24,6 @@ public class JMMTest_2 {
             }
         }, "mythread-1").start();
 
-
-
-
         new Thread(new Runnable() {
             @Override
             public void run() {

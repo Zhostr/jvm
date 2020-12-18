@@ -9,16 +9,23 @@ package com.luban.ziya.string;
 public class TestStringTable {
 
     public static void main(String[] args) {
-        String str1 = "1";
-        String str2 = "2";
-        String str3 = "3";
-        String str4 = "4";
-        String str5 = "5";
+//        String str1 = "1";
+//        String str2 = "2";
+//        String str3 = "3";
+//        String str4 = "4";
+//        String str5 = "5";
+//
+//        String str11 = "1";
+//        String str12 = "2";
+//        String str13 = "3";
+//        String str14 = "4";
+//        String str15 = "5";
 
-        String str11 = "1";
-        String str12 = "2";
-        String str13 = "3";
-        String str14 = "4";
-        String str15 = "5";
+        String s1 = "a" + new String("b");
+
+        String s2 = "a";
+        String s3 = new String("b");
+
+        System.out.println("=");
     }
 }

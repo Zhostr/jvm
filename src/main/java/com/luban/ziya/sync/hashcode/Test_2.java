@@ -21,9 +21,9 @@ public class Test_2 {
 
         System.out.println(ClassLayout.parseInstance(obj).toPrintable());
 
-        obj.hashCode();
-
         synchronized (obj) {
+            obj.hashCode();
+
             System.out.println(ClassLayout.parseInstance(obj).toPrintable());
         }
     }

@@ -28,6 +28,8 @@ public class Server {
             System.out.println("服务器端已启动");
 
             while (true) {
+                System.out.println("wait client connect...");
+
                 // 1、阻塞
                 socket = serverSocket.accept();
 
@@ -37,6 +39,8 @@ public class Server {
 
                 int len = 0;
                 byte[] content = new byte[1024];
+
+                System.out.println("wait client write...");
 
                 // 2、阻塞
                 inputStream.read(content);

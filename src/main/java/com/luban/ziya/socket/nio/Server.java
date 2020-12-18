@@ -23,6 +23,7 @@ public class Server {
         try {
             serverSocketChannel = ServerSocketChannel.open();
 
+            // accept
             serverSocketChannel.configureBlocking(false);
 
             serverSocketChannel.bind(new InetSocketAddress(6688));
@@ -88,6 +89,7 @@ public class Server {
         try {
             SocketChannel channel = socketChannel.accept();
 
+            // read
             channel.configureBlocking(false);
 
             channel.register(selector, SelectionKey.OP_READ);

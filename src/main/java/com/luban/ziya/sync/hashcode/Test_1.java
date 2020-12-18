@@ -13,9 +13,11 @@ public class Test_1 {
 
         System.out.println(ClassLayout.parseInstance(obj).toPrintable());
 
-        obj.hashCode();
+//        obj.hashCode();
 
         synchronized (obj) {
+            obj.hashCode();
+
             System.out.println(ClassLayout.parseInstance(obj).toPrintable());
         }
     }

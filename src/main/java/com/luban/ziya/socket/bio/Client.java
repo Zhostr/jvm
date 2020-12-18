@@ -34,7 +34,7 @@ public class Client {
             outputStream = socket.getOutputStream();
             inputStream = socket.getInputStream();
 
-            outputStream.write("我是客户端".getBytes("utf-8"));
+            outputStream.write("123abc".getBytes("utf-8"));
 
             //=====
             byte[] content = new byte[1024];
