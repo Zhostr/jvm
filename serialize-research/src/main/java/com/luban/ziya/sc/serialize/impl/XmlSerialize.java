@@ -1,6 +1,8 @@
 package com.luban.ziya.sc.serialize.impl;
 
 import com.luban.ziya.sc.serialize.ISerialize;
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 
 /**
  * Created By ziya
@@ -8,13 +10,13 @@ import com.luban.ziya.sc.serialize.ISerialize;
  */
 public class XmlSerialize implements ISerialize {
 
-    @Override
+    XStream xStream = new XStream(new DomDriver());
+
     public <T> byte[] serialize(T obj) {
-        return new byte[0];
+        return xStream.toXML(obj).getBytes();
     }
 
-    @Override
     public <T> T deSerialize(byte[] data) {
-        return null;
+        return (T) xStream.fromXML(new String(data));
     }
 }
