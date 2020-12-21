@@ -19,4 +19,8 @@ public class XmlSerialize implements ISerialize {
     public <T> T deSerialize(byte[] data) {
         return (T) xStream.fromXML(new String(data));
     }
+
+    public <T> T deSerialize(byte[] data, Class clazz) {
+        return null;
+    }
 }

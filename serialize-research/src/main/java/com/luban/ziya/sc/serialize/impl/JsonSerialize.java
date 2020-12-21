@@ -1,5 +1,6 @@
 package com.luban.ziya.sc.serialize.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.luban.ziya.sc.serialize.ISerialize;
 
 /**
@@ -8,13 +9,16 @@ import com.luban.ziya.sc.serialize.ISerialize;
  */
 public class JsonSerialize implements ISerialize {
 
-    @Override
+
     public <T> byte[] serialize(T obj) {
-        return new byte[0];
+        return JSON.toJSONString(obj).getBytes();
     }
 
-    @Override
     public <T> T deSerialize(byte[] data) {
         return null;
+    }
+
+    public <T> T deSerialize(byte[] data, Class clazz) {
+        return (T) JSON.parseObject(new String(data), clazz);
     }
 }

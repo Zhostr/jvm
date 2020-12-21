@@ -10,7 +10,6 @@ import java.io.*;
  */
 public class JdkSerialize_1 implements ISerialize {
 
-    @Override
     public <T> byte[] serialize(T obj) {
         ByteArrayOutputStream byteArrayOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
@@ -46,7 +45,6 @@ public class JdkSerialize_1 implements ISerialize {
         return null;
     }
 
-    @Override
     public <T> T deSerialize(byte[] data) {
         ByteArrayInputStream byteArrayInputStream = null;
         ObjectInputStream objectInputStream  = null;
@@ -79,6 +77,10 @@ public class JdkSerialize_1 implements ISerialize {
             }
         }
 
+        return null;
+    }
+
+    public <T> T deSerialize(byte[] data, Class clazz) {
         return null;
     }
 }

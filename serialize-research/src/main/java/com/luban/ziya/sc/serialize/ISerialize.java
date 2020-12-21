@@ -10,4 +10,6 @@ public interface ISerialize {
 
     public <T> T deSerialize(byte[] data);
 
+    public <T> T deSerialize(byte[] data, Class clazz);
+
 }

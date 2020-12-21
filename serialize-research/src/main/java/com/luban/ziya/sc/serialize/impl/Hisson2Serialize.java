@@ -8,13 +8,16 @@ import com.luban.ziya.sc.serialize.ISerialize;
  */
 public class Hisson2Serialize implements ISerialize {
 
-    @Override
+
     public <T> byte[] serialize(T obj) {
         return new byte[0];
     }
 
-    @Override
     public <T> T deSerialize(byte[] data) {
+        return null;
+    }
+
+    public <T> T deSerialize(byte[] data, Class clazz) {
         return null;
     }
 }
