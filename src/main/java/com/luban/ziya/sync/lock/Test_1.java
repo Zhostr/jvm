@@ -1,7 +1,10 @@
 package com.luban.ziya.sync.lock;
 
+import org.openjdk.jol.info.ClassLayout;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created By ziya
@@ -12,25 +15,15 @@ public class Test_1 {
     static int tickets = 0;
 
     public static void main(String[] args) {
-//        Thread t1 = new Thread(()->getTicket());
-//        Thread t2 = new Thread(()->getTicket());
-//        Thread t3 = new Thread(()->getTicket());
-//
-//        t1.start();
-//        t2.start();
-//        t3.start();
-//
-//        try {
-//            t1.join();
-//            t2.join();
-//            t3.join();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        System.out.println("===== " + tickets + " =====");
+        Test_1 obj = new Test_1();
 
-        System.out.println(Test_1.class instanceof Object);
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(ClassLayout.parseInstance(obj).toPrintable());
     }
 
     public synchronized static void getTicket() {
