@@ -16,20 +16,20 @@ public class ProtobufSerializeTest_1 {
 
         ISerialize serialize = new ProtobufSerialize_1(Hero.class);
 
-//        byte[] bytes = serialize.serialize(hero);
-//
-//        System.out.println("=====");
-//
-//        for (int i = 0; i < bytes.length; i++) {
-//            System.out.print(Integer.toHexString(bytes[i]) + " ");
-//        }
-//
-//        System.out.println("");
-//
-//        System.out.println("=>" + bytes.length);
-//        System.out.println("=====");
+        byte[] bytes = serialize.serialize(hero);
 
-        Hero obj = serialize.deSerialize(null);
-        System.out.println(obj);
+        System.out.println("=====");
+
+        for (int i = 0; i < bytes.length; i++) {
+            System.out.print(Integer.toHexString(bytes[i]) + " ");
+        }
+
+        System.out.println("");
+
+        System.out.println("=>" + bytes.length);
+        System.out.println("=====");
+
+//        Hero obj = serialize.deSerialize(null);
+//        System.out.println(obj);
     }
 }
