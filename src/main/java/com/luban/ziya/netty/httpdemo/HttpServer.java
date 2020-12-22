@@ -1,4 +1,4 @@
-package com.luban.ziya.netty.http;
+package com.luban.ziya.netty.httpdemo;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

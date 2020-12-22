@@ -1,4 +1,4 @@
-package com.luban.ziya.netty.http;
+package com.luban.ziya.netty.httpdemo;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -11,7 +11,7 @@ public class HttpServerInitializer extends ChannelInitializer<SocketChannel> {
     protected void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline pipeline = ch.pipeline();
 
-        pipeline.addLast("MyHttpServerCodec", new HttpServerCodec());
-        pipeline.addLast("MyHttpServerHandler", new HttpServerHandler());
+        pipeline.addLast(new HttpServerCodec());
+        pipeline.addLast(new HttpServerHandler());
     }
 }
