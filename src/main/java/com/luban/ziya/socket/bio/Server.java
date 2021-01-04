@@ -1,10 +1,12 @@
 package com.luban.ziya.socket.bio;
 
+import java.io.FileDescriptor;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketImpl;
 
 /**
  * Created By ziya
@@ -13,6 +15,8 @@ import java.net.Socket;
 public class Server {
 
     public static void main(String[] args) {
+        System.loadLibrary("jni");
+
         new Server().run();
     }
 
@@ -24,6 +28,9 @@ public class Server {
 
         try {
             serverSocket = new ServerSocket(6688);
+
+            FileDescriptor o = (FileDescriptor) Zystem.configureBlocking(serverSocket, false);
+            System.out.println(o);
 
             System.out.println("服务器端已启动");
 
