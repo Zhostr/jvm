@@ -9,6 +9,6 @@ public class Test_1 {
     static Test_1 obj;
 
     public static void main(String[] args) {
-        obj = new Test_1();
+        Test_1 obj = new Test_1();
     }
 }

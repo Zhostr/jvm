@@ -13,6 +13,7 @@
         <module>serialize-research</module>
         <module>serialize-research/example_1</module>
         <module>server-client</module>
+        <module>jvm-secret-research</module>
     </modules>
 
     <dependencies>

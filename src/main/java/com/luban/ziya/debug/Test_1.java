@@ -7,8 +7,9 @@ package com.luban.ziya.debug;
 public class Test_1 {
 
     public static void main(String[] args) {
-        System.out.println("hi");
+        String s1 = new String("hello");
+        System.out.println(s1);
 
-        while (true);
+//        while (true);
     }
 }

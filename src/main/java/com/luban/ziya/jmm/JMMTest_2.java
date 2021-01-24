@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class JMMTest_2 {
 
-    public static boolean flag = false;
+    public static volatile boolean flag = false;
 
     public static void main(String[] args) {
         new Thread(new Runnable() {

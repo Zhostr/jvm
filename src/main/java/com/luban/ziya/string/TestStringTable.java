@@ -27,5 +27,7 @@ public class TestStringTable {
         String s3 = new String("b");
 
         System.out.println("=");
+
+        while (true);
     }
 }

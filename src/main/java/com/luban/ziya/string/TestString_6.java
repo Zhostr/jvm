@@ -18,5 +18,10 @@ public class TestString_6 {
         String s2 = new String("1");
 
         String s = s1 + s2;
+
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+
+        System.out.println(s1 == s2);
     }
 }

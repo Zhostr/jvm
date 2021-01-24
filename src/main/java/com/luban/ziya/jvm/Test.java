@@ -5,9 +5,13 @@ public class Test {
     public static Test test4 = new Test();
 
     public static void main(String[] args) {
-        Test obj = new Test();
+//        Test obj = new Test();
+//
+//        System.out.println(test4.add());
 
-        System.out.println(test4.add());
+        byte a = 1;
+
+        System.out.println(~a);
     }
 
     public int add() {
