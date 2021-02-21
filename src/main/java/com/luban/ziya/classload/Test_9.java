@@ -12,7 +12,6 @@ public class Test_9 {
 }
 
 class Test_9_A {
-
     static {
         System.out.println("A Static Block");
     }

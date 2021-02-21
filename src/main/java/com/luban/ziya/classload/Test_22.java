@@ -13,7 +13,6 @@ public class Test_22 {
 
         System.out.println(Test_22_A.val1);
         System.out.println(Test_22_A.val2);
-
     }
 }
 

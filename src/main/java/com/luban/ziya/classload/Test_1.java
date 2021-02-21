@@ -3,8 +3,6 @@ package com.luban.ziya.classload;
 public class Test_1 {
     public static void main(String[] args) {
         System.out.printf(Test_1_B.str);
-
-        while (true);
     }
 }
 

@@ -3,9 +3,9 @@ package com.luban.ziya.classload;
 public class Test_4 {
 
     public static void main(String[] args) {
-        Test_1 arrs[] = new Test_1[1];
+        Test_4_A arrs[] = new Test_4_A[1];
 
-        while (true);
+        System.out.println("end");
     }
 }
 

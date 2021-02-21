@@ -10,4 +10,14 @@ public class Tom extends Cat {
     public String name() {
         return "Tom";
     }
+
+    @Override
+    public void life() {
+        System.out.println("life");
+    }
+
+    @Override
+    public void earth() {
+        System.out.println("earth");
+    }
 }

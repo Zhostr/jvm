@@ -18,7 +18,7 @@ public class Test_21 {
 
 class Test_21_A {
 
-    public static int val1;
+    public static int val1 = 0;
     public static int val2 = 1;
 
     public static Test_21_A instance = new Test_21_A();
