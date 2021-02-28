@@ -14,7 +14,7 @@ public class StackOverFlowTest {
         StackOverFlowTest test = new StackOverFlowTest();
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

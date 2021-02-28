@@ -8,9 +8,13 @@ public class Test_6 {
 }
 
 class Test_6_A {
+
     public static final String str = "A Str";
 
     static {
         System.out.println("Test_6_A Static Block");
     }
+
+
+//    public static final String str = "A Str";
 }

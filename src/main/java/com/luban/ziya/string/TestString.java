@@ -16,6 +16,7 @@ public class TestString {
 //        test6();
 //        test7();
         test8();
+
 //        test8_1();
 
 //        test9();
@@ -32,7 +33,7 @@ public class TestString {
         String s2 = "11";
 
         // 加了这句会发生什么
-//        s1.intern();
+        s1.intern();
 
         System.out.println(s1 == s2);
     }

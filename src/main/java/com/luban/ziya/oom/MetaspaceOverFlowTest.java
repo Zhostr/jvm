@@ -23,7 +23,8 @@ public class MetaspaceOverFlowTest {
 
             enhancer.setSuperclass(MetaspaceOverFlowTest.class);
 
-            enhancer.setUseCache(false);
+            // 设置为true、false结果会有何不同？
+            enhancer.setUseCache(true);
 
             enhancer.setCallback(new MethodInterceptor() {
                 public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
