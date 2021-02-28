@@ -7,8 +7,9 @@ package com.luban.ziya.string;
 public class TestHashcode {
 
     public static void main(String[] args) {
-        String s1 = "11";
         String s2 = new String("11");
+        String s3 = new String("11");
+        String s1 = "11";
 
         System.out.println(s1.hashCode());
         System.out.println(s2.hashCode());

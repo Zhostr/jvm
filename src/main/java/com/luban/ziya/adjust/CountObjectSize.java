@@ -11,5 +11,6 @@ public class CountObjectSize {
         CountObjectSize object = new CountObjectSize();
 
         System.out.println(ClassLayout.parseInstance(object).toPrintable());
+//        while (true);
     }
 }
