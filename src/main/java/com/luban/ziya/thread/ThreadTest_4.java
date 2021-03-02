@@ -1,20 +1,34 @@
 package com.luban.ziya.thread;
 
-import sun.misc.Unsafe;
-
-import java.util.concurrent.locks.LockSupport;
-
-/**
- * Created By ziya
- * 2020/9/9
- */
 public class ThreadTest_4 {
 
-    public static void main(String[] args) throws InterruptedException {
-        System.out.println("start");
+    static int val = 0;
 
-        LockSupport.park();
+    public static void main(String[] args) {
+        Thread t1 = new Thread(() -> count() );
 
-        System.out.println("end");
+        Thread t2 = new Thread(() -> count() );
+
+        Thread t3 = new Thread(() -> count() );
+
+        t1.start();
+        t2.start();
+        t3.start();
+
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(val);
+    }
+
+    static synchronized void count() {
+        for (int j = 0; j < 10000; j++) {
+            val++;
+        }
     }
 }

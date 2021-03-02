@@ -1,38 +1,54 @@
 package com.luban.ziya.thread;
 
-import java.util.concurrent.TimeUnit;
 
-/**
- * Created By ziya
- * 2020/9/9
- */
+import com.luban.ziya.thread.lock.FairLock;
+
 public class ThreadTest_3 {
 
-    public final void print(String msg) {
-        System.out.println("=====");
-        _print(msg);
-        System.out.println("=====");
+    static int val = 0;
+
+    static FairLock lock = new FairLock();
+
+    public static void main(String[] args) {
+        Thread t1 = new Thread(() -> count() );
+
+        Thread t2 = new Thread(() -> count() );
+
+        Thread t3 = new Thread(() -> count() );
+
+        Thread t4 = new Thread(() -> count() );
+
+        Thread t5 = new Thread(() -> count() );
+
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+        t5.start();
+
+        try {
+            t1.join();
+            t2.join();
+            t3.join();
+            t4.join();
+            t5.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(val);
     }
 
-    protected void _print(String msg) {
+    static void count() {
+        try {
+            lock.lock();
 
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        ThreadTest_3 t1 = new ThreadTest_3() {
-            @Override
-            protected void _print(String msg) {
-                System.out.println(msg);
+            for (int j = 0; j < 10000; j++) {
+                val++;
             }
-        };
-        t1.print("i am t1");
+        } finally {
+            lock.unlock();
+        }
 
-        ThreadTest_3 t2 = new ThreadTest_3() {
-            @Override
-            protected void _print(String msg) {
-                System.out.println(msg);
-            }
-        };
-        t2.print("i am t2");
     }
 }

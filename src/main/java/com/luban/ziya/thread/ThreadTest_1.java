@@ -1,27 +1,32 @@
 package com.luban.ziya.thread;
 
 /**
- * Created By ziya
- * 2020/9/9
+ *  这个程序是线程安全的吗
+ *
+ *  研究join的底层实现
  */
-public class ThreadTest_1 implements Runnable {
+
+public class ThreadTest_1 {
+
+    static int val = 0;
 
     public static void main(String[] args) {
-        Thread thread = new Thread(new ThreadTest_1(), "ThreadTest_1");
+        for (int i = 0; i < 10; i++) {
+            Thread t = new Thread(() -> {
+                for (int j = 0; j < 10000000; j++) {
+                    val++;
+                }
+            });
 
-        thread.start();
-    }
-
-    @Override
-    public void run() {
-        for (int i = 0; i < Integer.MAX_VALUE; i++) {
-            System.out.println(i);
+            t.start();
 
             try {
-                Thread.sleep(1);
+                t.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+
+        System.out.println(val);
     }
 }

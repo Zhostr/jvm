@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class HeapOverFlowTest {
 
-    int[] intArr = new int[1024 * 32];
+    int[] intArr = new int[10 * 1024 * 1024];
 
     public static void main(String[] args) {
         List<HeapOverFlowTest> objs = new ArrayList<>();
