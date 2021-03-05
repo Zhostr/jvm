@@ -32,8 +32,6 @@ public class MetaspaceOverFlowTest {
                 }
             });
 
-            System.out.println("running...");
-
             enhancer.create();
         }
     }

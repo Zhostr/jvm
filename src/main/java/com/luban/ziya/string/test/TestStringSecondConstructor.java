@@ -1,4 +1,4 @@
-package com.luban.ziya.string;
+package com.luban.ziya.string.test;
 
 /**
  * Created By ziya
@@ -9,6 +9,10 @@ public class TestStringSecondConstructor {
     public static void main(String[] args) {
         String s1 = new String(new char[]{'1', '1'}, 0, 2);
 
-        String s2 = new String("22");
+//        s1.intern();
+
+        String s2 = "11";
+
+        System.out.println(s1 == s2);
     }
 }

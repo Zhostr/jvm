@@ -1,4 +1,4 @@
-package com.luban.ziya.string;
+package com.luban.ziya.string.test;
 
 import java.util.UUID;
 

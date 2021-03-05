@@ -12,7 +12,7 @@ import java.util.List;
 public class CountHeapObjectSize {
     byte[] arr = new byte[1024];
 
-    List<CountHeapObjectSize> list = new ArrayList<>();
+    List<CountHeapObjectSize> list = new ArrayList<CountHeapObjectSize>();
 
     public static void main(String[] args) {
         CountHeapObjectSize obj = new CountHeapObjectSize();

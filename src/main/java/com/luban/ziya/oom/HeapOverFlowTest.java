@@ -6,14 +6,14 @@ import java.util.concurrent.TimeUnit;
 
 public class HeapOverFlowTest {
 
-    int[] intArr = new int[10 * 1024 * 1024];
+    int[] intArr = new int[1024 * 128];
 
     public static void main(String[] args) {
         List<HeapOverFlowTest> objs = new ArrayList<>();
 
         for (;;) {
             try {
-                TimeUnit.MILLISECONDS.sleep(1);
+                TimeUnit.MILLISECONDS.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

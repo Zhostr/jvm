@@ -7,9 +7,8 @@ package com.luban.ziya.debug;
 public class Test_1 {
 
     public static void main(String[] args) {
-        String s1 = new String("hello");
-        System.out.println(s1);
+        int[] arr = {1, 2, 3, 4, 6};
 
-//        while (true);
+        while (true);
     }
 }
