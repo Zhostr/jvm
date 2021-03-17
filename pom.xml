@@ -12,6 +12,7 @@
         <module>netty-research</module>
         <module>serialize-research</module>
         <module>jvm-secret-research</module>
+        <module>javaagent-research</module>
     </modules>
 
     <dependencies>

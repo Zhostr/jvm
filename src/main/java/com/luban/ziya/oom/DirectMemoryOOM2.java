@@ -7,6 +7,8 @@ import java.util.List;
 /**
  * Created By ziya
  * 2020/11/21
+ *
+ * -Xms20m -Xmx20m -XX:+PrintGCDetails
  */
 public class DirectMemoryOOM2 {
 

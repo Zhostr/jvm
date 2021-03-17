@@ -22,7 +22,7 @@ public class StackOverFlowTest {
         try {
             test.test();
         } catch (Throwable t) {
-//            t.printStackTrace();
+            t.printStackTrace();
 
             System.out.println(test.val);
         }
