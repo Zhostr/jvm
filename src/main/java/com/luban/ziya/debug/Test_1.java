@@ -1,21 +1,29 @@
 package com.luban.ziya.debug;
 
+import java.lang.reflect.Field;
+
 /**
  * Created By ziya
  * 2020/12/30
  */
 public class Test_1 {
 
+    private int a = 10;
+
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 6};
-        Test_1[] objArr = new Test_1[1];
+        Test_1 obj = new Test_1();
 
-//        objArr[0] = new Test_1();
+        Class clazz = obj.getClass();
+        try {
+            Field field = clazz.getDeclaredField("a");
 
-        for (int i = 0; i < Integer.MAX_VALUE; i++) {
-            System.out.println(i);
+            field.set(obj, 20);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
         }
 
-        while (true);
+        System.out.println(obj.a);
     }
 }
