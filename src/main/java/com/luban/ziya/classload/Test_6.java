@@ -14,7 +14,4 @@ class Test_6_A {
     static {
         System.out.println("Test_6_A Static Block");
     }
-
-
-//    public static final String str = "A Str";
 }

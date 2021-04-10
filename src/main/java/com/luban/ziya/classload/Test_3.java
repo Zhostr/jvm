@@ -1,12 +1,5 @@
 package com.luban.ziya.classload;
 
-/**
- *
- * result:
- *      A Static Block
- *      A str
- *
- */
 public class Test_3 {
 
     public static void main(String[] args) {
