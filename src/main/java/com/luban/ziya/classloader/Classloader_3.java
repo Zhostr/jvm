@@ -5,45 +5,25 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-/**
- *      反射的底层原理
- *          forName
- *          getField
- *          getMethod
- *
- *      获取，知道如何存储
- *
- *      根类加载器的存储空间
- *      Directory  字典
- *          hashtable
- *
- *      key         类的全限定名+类加载器->index
- *      value       Metadata：klass
- *
- */
-
-public class Classloader_2 extends ClassLoader {
+public class Classloader_3 extends ClassLoader {
 
     public static void main(String[] args) throws ClassNotFoundException {
-        Classloader_2 classloader1 = new Classloader_2();
+        Classloader_3 classloader1 = new Classloader_3();
         classloader1.setFilepath("/home/ziya/Documents/java-test/");
         Class<?> clazz1 = classloader1.loadClass("com.qimingnan.classloader.Classloader_1");
+        System.out.println("clazz1 hashcode: " + clazz1.hashCode());
 
-        //=====
-        Classloader_2 classloader2 = new Classloader_2();
-        classloader2.setFilepath("/home/ziya/IdeaProjects/luban-jvm-research/target/classes/");
-        Class<?> clazz2 = classloader2.loadClass("com.luban.ziya.classloader.Classloader_1");
-
-        System.out.println(clazz1.getClassLoader());
-        System.out.println(clazz2.getClassLoader());
-        System.out.println(clazz1 == clazz2);
+        Classloader_3 classloader2 = new Classloader_3();
+        classloader2.setFilepath("/home/ziya/Documents/java-test/");
+        Class<?> clazz2 = classloader2.loadClass("com.qimingnan.classloader.Classloader_1");
+        System.out.println("clazz2 hashcode: " + clazz2.hashCode());
     }
 
     public static final String SUFFIX = ".class";
 
     public String filepath = "";
 
-    public Classloader_2() {
+    public Classloader_3() {
         super();
     }
 
@@ -53,6 +33,8 @@ public class Classloader_2 extends ClassLoader {
 
     @Override
     protected Class<?> findClass(String className) throws ClassNotFoundException {
+//        System.out.println("Classloader_2 findClass");
+
         byte[] data = getData(className.replace('.', '/'));
 
         return defineClass(className, data, 0, data.length);
