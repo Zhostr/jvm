@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="netty-research" />
-        <module name="serialize-research" />
         <module name="jvm-secret-research" />
         <module name="javaagent-research" />
       </profile>

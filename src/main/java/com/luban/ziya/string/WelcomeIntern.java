@@ -7,13 +7,23 @@ package com.luban.ziya.string;
 public class WelcomeIntern {
 
     public static void main(String[] args) {
-        welcome();
+        test2();
     }
 
-    public static void welcome() {
+    public static void test1() {
         String s1 = new String("zi") + new String("ya");
 
-        s1.intern();
+//        s1.intern();
+
+        String s2 = "ziya";
+
+        System.out.println(s1 == s2);
+    }
+
+    public static void test2() {
+        String s1 = "zi" + new String("ya");
+
+//        s1.intern();
 
         String s2 = "ziya";
 

@@ -9,7 +9,7 @@ public class TestStringSecondConstructor {
     public static void main(String[] args) {
         String s1 = new String(new char[]{'1', '1'}, 0, 2);
 
-//        s1.intern();
+        s1.intern();
 
         String s2 = "11";
 
