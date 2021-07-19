@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/javaagent-research/javaagent-research.iml" filepath="$PROJECT_DIR$/javaagent-research/javaagent-research.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jvm.iml" filepath="$PROJECT_DIR$/.idea/jvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/jvm-secret-research/jvm-secret-research.iml" filepath="$PROJECT_DIR$/jvm-secret-research/jvm-secret-research.iml" />
-      <module fileurl="file://$PROJECT_DIR$/luban-jvm-research.iml" filepath="$PROJECT_DIR$/luban-jvm-research.iml" />
       <module fileurl="file://$PROJECT_DIR$/netty-research/netty-research.iml" filepath="$PROJECT_DIR$/netty-research/netty-research.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serialize-research/serialize-research.iml" filepath="$PROJECT_DIR$/serialize-research/serialize-research.iml" />
     </modules>
   </component>
 </project>

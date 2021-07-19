@@ -8,21 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="netty-research" />
+        <module name="serialize-research" />
         <module name="jvm-secret-research" />
         <module name="javaagent-research" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="javaagent-research" target="8" />
-      <module name="jvm-secret-research" target="8" />
-      <module name="luban-jvm-research" target="8" />
-      <module name="netty-research" target="8" />
-      <module name="serialize-research" target="8" />
+    <bytecodeTargetLevel>
+      <module name="javaagent-research" target="1.8" />
+      <module name="jvm" target="1.8" />
+      <module name="jvm-secret-research" target="1.8" />
+      <module name="netty-research" target="1.8" />
+      <module name="serialize-research" target="1.8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="luban-jvm-research" options="" />
-    </option>
   </component>
 </project>

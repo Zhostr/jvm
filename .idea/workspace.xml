@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7de0b292-6c18-47e4-bcf5-d146165bac3a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serialize-research/serialize-research.iml" beforeDir="false" afterPath="$PROJECT_DIR$/serialize-research/serialize-research.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1vYRSRJuRYel4MdI1m5vK2knek6" />
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7de0b292-6c18-47e4-bcf5-d146165bac3a" name="Default Changelist" comment="" />
+      <created>1626737034317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626737034317</updated>
+      <workItem from="1626737035880" duration="803000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="509" y="-803" width="987" height="710" key="#Project_Structure" timestamp="1626737372946">
+      <screen x="-127" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="509" y="-803" width="987" height="710" key="#Project_Structure/-127.-1057.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1626737372946" />
+    <state x="614" y="-747" key="NewModule_or_Project.wizard" timestamp="1626737361659">
+      <screen x="-127" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="614" y="-747" key="NewModule_or_Project.wizard/-127.-1057.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1626737361659" />
+    <state x="380" y="-751" key="new project wizard" timestamp="1626737341059">
+      <screen x="-127" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="380" y="-751" key="new project wizard/-127.-1057.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1626737341059" />
+  </component>
+</project>
