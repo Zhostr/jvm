@@ -13,6 +13,7 @@
         <module>serialize-research</module>
         <module>jvm-secret-research</module>
         <module>javaagent-research</module>
+        <module>base-research</module>
     </modules>
 
     <properties>
