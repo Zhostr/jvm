@@ -9,9 +9,13 @@ import com.zest.utils.SystemMethod;
  */
 public class Hello {
 
-    private int a = 100;
+    private int normalVar = 1000;
 
-    private static final int INT = 1000;
+    private static int STATIC_VAR_INIT = 10;
+
+    private static int STATIC_VAR_NO_INIT;
+
+    private static final int STATIC_FINAL_VAR = 100;
 
     public static void main(String[] args) throws Exception {
         Hello helloObj = new Hello();
@@ -29,6 +33,5 @@ public class Hello {
 //
 //        Thread thread = new Thread();
 
-        while (true);
     }
 }
