@@ -17,6 +17,10 @@ public class Hello {
 
     private static final int STATIC_FINAL_VAR = 100;
 
+    static {
+        System.out.println(STATIC_FINAL_VAR);
+    }
+
     public static void main(String[] args) throws Exception {
         Hello helloObj = new Hello();
 

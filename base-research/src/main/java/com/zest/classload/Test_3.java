@@ -16,7 +16,7 @@ class Test_3_A {
 }
 
 class Test_3_B extends Test_3_A {
-    public static String str = "B str";
+    public static final String str = "B str";
 
     static {
         System.out.println("B Static Block");
