@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.luban.ziya</groupId>
-    <artifactId>luban-jvm-research</artifactId>
+    <artifactId>jvm-research</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
