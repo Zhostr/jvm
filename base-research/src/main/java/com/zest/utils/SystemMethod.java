@@ -26,8 +26,8 @@ public interface SystemMethod {
     }
 
     /**
-     * 启动类加载器加载的路径
-     * @return
+     * BootstrapClassLoader 启动类加载器加载的路径
+     * @return 跟 System.getProperty("sun.boot.class.path") 返回一样
      */
     static String showBootstrapLoadPath() {
         StringJoiner stringJoiner = new StringJoiner(",");
@@ -39,11 +39,11 @@ public interface SystemMethod {
     }
 
     /**
-     * 返回启动命令中的 -classpath 参数
+     * 返回 classpath 路径
      * @return
      */
     static String getClasspath() {
-        return System.getProperty("classpath");
+        return System.getProperty("java.class.path");
     }
 
 }

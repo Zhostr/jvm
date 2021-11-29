@@ -1,5 +1,7 @@
 package com.zest.classloader;
 
+import com.zest.utils.SystemMethod;
+
 import java.io.*;
 
 /**
@@ -16,8 +18,11 @@ public class Classloader_1 extends ClassLoader {
         Classloader_1 classloader = new Classloader_1();
 
         try {
-            // -classpath /……/Users/zhoust/IdeaProjects/my-code/jvm/base-research/target/classes:/xxxxxx/jol-core-0.10.jar com.zest.classloader.Classloader_1
-            // 由 AppClassLoader 负责加载 -classpath 中指定的 jar/classes 中的类
+            // -classpath ……~/IdeaProjects/my-code/jvm/base-research/target/classes:……
+            // The class path: classes, including classes in JAR files, on paths specified by the system property 'java.class.path'.
+            // If a JAR file on the class path has a manifest with the Class-Path attribute, JAR files specified by the Class-Path attribute will be searched also.
+            // 由 AppClassLoader 负责加载 classpath 路径中指定的类
+            System.out.println(SystemMethod.getClasspath());
             Class<?> clazz = classloader.loadClass(Classloader_1_A.class.getName());
 
             System.out.println(clazz.getClassLoader());
